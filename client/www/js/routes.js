@@ -10,7 +10,7 @@ angular.module('app.routes', [])
     
   
 
-      .state('strykerLogin', {
+  .state('strykerLogin', {
     url: '/login',
     templateUrl: 'templates/strykerLogin.html',
     controller: 'strykerLoginCtrl'
