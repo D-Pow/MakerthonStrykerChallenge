@@ -10,7 +10,7 @@ angular.module('app.routes', [])
     
   
 
-  .state('strykerLogin', {
+      .state('strykerLogin', {
     url: '/login',
     templateUrl: 'templates/strykerLogin.html',
     controller: 'strykerLoginCtrl'
@@ -32,32 +32,32 @@ angular.module('app.routes', [])
     controller: 'menuCtrl'
   })
 
-  .state('menu.surgicalBlueprint', {
+  .state('menu.earlSSurgicalSchedule', {
     url: '/home',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/surgicalBlueprint.html',
-        controller: 'surgicalBlueprintCtrl'
+        templateUrl: 'templates/earlSSurgicalSchedule.html',
+        controller: 'earlSSurgicalScheduleCtrl'
       }
     }
   })
 
-  .state('menu.appendectomy', {
+  .state('menu.appendectomyBlueprint', {
     url: '/appendectomy-0730',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/appendectomy.html',
-        controller: 'appendectomyCtrl'
+        templateUrl: 'templates/appendectomyBlueprint.html',
+        controller: 'appendectomyBlueprintCtrl'
       }
     }
   })
 
-  .state('menu.gastrectomy', {
+  .state('menu.gastrectomyBlueprint', {
     url: '/gastrectomy-1730',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/gastrectomy.html',
-        controller: 'gastrectomyCtrl'
+        templateUrl: 'templates/gastrectomyBlueprint.html',
+        controller: 'gastrectomyBlueprintCtrl'
       }
     }
   })
@@ -86,6 +86,26 @@ angular.module('app.routes', [])
     url: '/logout',
     templateUrl: 'templates/loggedOut.html',
     controller: 'loggedOutCtrl'
+  })
+
+  .state('menu.oR10', {
+    url: '/or10',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/oR10.html',
+        controller: 'oR10Ctrl'
+      }
+    }
+  })
+
+  .state('menu.oR22', {
+    url: '/or22',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/oR22.html',
+        controller: 'oR22Ctrl'
+      }
+    }
   })
 
 $urlRouterProvider.otherwise('/login')
