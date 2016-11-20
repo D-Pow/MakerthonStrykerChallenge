@@ -11,7 +11,7 @@
     <div class="spacer" style="width: 300px; height: 30px;"></div>
     <h4 id="gastrectomyBlueprint-heading17" style="color:#000000;text-align:center;">Team</h4>
     <ion-list id="gastrectomyBlueprint-list24">
-      <ion-item class="item-avatar" id="gastrectomyBlueprint-list-item46">
+      <ion-item class="item-avatar" id="gastrectomyBlueprint-list-item46" ui-sref="menu.surgeonProfile">
         <img src="img/JJbZ8QiSiqQGmfXI8aBX_Earl.JPG">
         <h2>Surgeon</h2>
         <p>Earl Co</p>
@@ -39,7 +39,7 @@
       </div>
       <form id="gastrectomyBlueprint-form4" class="list">
         <label class="item item-input" id="gastrectomyBlueprint-input9">
-          <span class="input-label">Post consideration</span>
+          <span class="input-label">Add consideration</span>
           <input type="text" placeholder="">
         </label>
       </form>
@@ -77,13 +77,20 @@
     <div class="spacer" style="width: 300px; height: 30px;"></div>
     <form id="gastrectomyBlueprint-form9" class="list">
       <ion-checkbox id="gastrectomyBlueprint-checkbox4" onclick='return false;' ng-checked='true'>Anesthesiologist</ion-checkbox>
+      <ion-checkbox id="gastrectomyBlueprint-checkbox4" 
+      onclick='return false;' 
+      ng-model='surgeonValidated'
+      >Surgeon</ion-checkbox>
     </form>
-    <button id="gastrectomy-button5" class="button button-positive  button-block"
-    onclick="
+    <button id="gastrectomy-button5" class="button button-positive button-block" 
+      ng-click="validate()"
+      onclick="
         b = document.getElementById('gastrectomy-button5');
         b.innerHTML = 'Validated!';
         b.className='button button-balanced  button-block';
         checkboxSurgeon = document.getElementById('gastrectomyBlueprint-checkbox3');
-        ">Validate</button>
+        "
+        >Validate</button>
+    <button [attr.newColor]="addAttribute ? '' : null">Test</button>
   </ion-content>
 </ion-view>

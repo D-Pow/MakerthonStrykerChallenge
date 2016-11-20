@@ -125,6 +125,16 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('menu.surgeonProfile', {
+    url: '/surgeonProfile',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/surgeonProfile.html',
+        controller: 'surgeonProfileCtrl'
+      }
+    }
+  })
+
 $urlRouterProvider.otherwise('/login')
 
   
