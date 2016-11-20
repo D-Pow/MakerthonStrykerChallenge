@@ -14,7 +14,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 
 })
 
-.run(function ($ionicPlatform, $rootScope, $location, $ionicLoading) {
+.run(function ($ionicPlatform, $rootScope, $location, Auth, $ionicLoading) {
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -28,7 +28,6 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
         // To Resolve Bug
         ionic.Platform.fullScreen();
 
-        // $rootScope.firebaseUrl = firebaseUrl;
         $rootScope.displayName = null;
 
         // Auth.$onAuth(function (authData) {

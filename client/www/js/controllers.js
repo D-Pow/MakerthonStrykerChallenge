@@ -3,8 +3,31 @@ angular.module('app.controllers', [])
 .controller('strykerLoginCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+function ($scope, $stateParams, Auth) {
+	$scope.createUser = function() {
+      $scope.message = null;
+      $scope.error = null;
 
+      // Create a new user
+      Auth.$createUserWithEmailAndPassword($scope.email, $scope.password)
+        .then(function(firebaseUser) {
+          $scope.message = "User created with uid: " + firebaseUser.uid;
+        }).catch(function(error) {
+          $scope.error = error;
+        });
+    };
+
+    $scope.deleteUser = function() {
+      $scope.message = null;
+      $scope.error = null;
+
+      // Delete the currently signed-in user
+      Auth.$deleteUser().then(function() {
+        $scope.message = "User deleted";
+      }).catch(function(error) {
+        $scope.error = error;
+      });
+    };
 
 }])
    
