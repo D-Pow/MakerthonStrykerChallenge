@@ -1,5 +1,5 @@
 # [NYU Healthcare Makerthon 2016](http://www.nyuhealthcaremakerthon.com/)
-# Stryker Challenge
+## Stryker Challenge
 
 The goal of this project was to design a unified, dynamic system
 that would facilitate information flow and communication in an
